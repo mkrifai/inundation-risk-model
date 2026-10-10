@@ -1,6 +1,20 @@
 """
 Model explainability engine using SHAP (SHapley Additive exPlanations).
 Computes Shapley values and feature importance rankings for hazard models.
+
+References:
+-----------
+- Lundberg, S. M., & Lee, S.-I. (2017). A unified approach to interpreting model
+  predictions. Advances in Neural Information Processing Systems (NeurIPS), 30.
+- Lundberg, S. M., Erion, G., Chen, H., DeGrave, A., Prutkin, J. M., Nair, B., ... &
+  Lee, S. I. (2020). From local explanations to global understanding with explainable
+  AI for trees. Nature Machine Intelligence, 2(1), 56-67.
+
+Note:
+-----
+Shapley feature attributions reflect tree split topology and marginal contributions.
+In the presence of strong geospatial collinearity among conditioning factors,
+SHAP values should be interpreted alongside physical hydrological domain knowledge.
 """
 
 from typing import Any, Dict, List, Optional, Tuple

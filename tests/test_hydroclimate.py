@@ -47,6 +47,17 @@ def test_compute_return_periods(synthetic_rainfall_series):
     assert rp["T2"] < rp["T10"] < rp["T50"] < rp["T100"]
 
 
+def test_compute_return_periods_with_ci(synthetic_rainfall_series):
+    params = fit_gumbel(synthetic_rainfall_series)
+    rp_ci = compute_return_periods(params, [2, 10, 50, 100], return_ci=True)
+    assert "T100" in rp_ci
+    assert "T100_se" in rp_ci
+    assert "T100_ci_lower" in rp_ci
+    assert "T100_ci_upper" in rp_ci
+    assert rp_ci["T100_se"] > 0
+    assert rp_ci["T100_ci_lower"] < rp_ci["T100"] < rp_ci["T100_ci_upper"]
+
+
 def test_etccdi_indices(synthetic_daily_rainfall):
     indices = compute_etccdi_indices(synthetic_daily_rainfall)
     assert indices["rx1day"] >= 85.0  # Injected peak was 85.0

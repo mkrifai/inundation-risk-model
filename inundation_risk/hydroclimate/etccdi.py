@@ -1,6 +1,14 @@
 """
 ETCCDI (Expert Team on Climate Change Detection and Indices) extreme rainfall indices.
 Calculates standardized indices for hydroclimatic risk characterization.
+
+References:
+-----------
+- Zhang, X., Alexander, L., Hegerl, G. C., Jones, P., Klein Tank, A., Peterson, T. C.,
+  Trewin, B., & Zwiers, F. W. (2011). Indices for monitoring changes in extremes based
+  on daily temperature and precipitation data. WIREs Climate Change, 2(6), 851-870.
+- World Meteorological Organization (WMO) Guidelines on Analysis of Extremes in a
+  Changing Climate in Support of Informed Decisions for Adaptation (WCDMP-No. 72).
 """
 
 from typing import Dict, Union

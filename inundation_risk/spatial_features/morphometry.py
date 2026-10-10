@@ -1,6 +1,12 @@
 """
 Morphometric terrain analysis: Slope, Aspect, and Curvatures from DEM.
-Uses standard finite-difference moving window calculations.
+Uses Horn's finite-difference method and Zevenbergen & Thorne polynomial surface fitting.
+
+References:
+-----------
+- Horn, B. K. P. (1981). Hill shading and the reflectance map. Proceedings of the IEEE, 69(1), 14-47.
+- Zevenbergen, L. W., & Thorne, C. R. (1987). Quantitative analysis of land surface topography.
+  Earth Surface Processes and Landforms, 12(1), 47-56.
 """
 
 from typing import Tuple

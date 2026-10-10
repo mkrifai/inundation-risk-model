@@ -1,6 +1,13 @@
 """
 Hydrological conditioning indices: Topographic Wetness Index (TWI),
 stream extraction, and Euclidean distance to stream networks.
+
+References:
+-----------
+- Beven, K. J., & Kirkby, M. J. (1979). A physically based, variable contributing
+  area model of basin hydrology. Hydrological Sciences Bulletin, 24(1), 43-69.
+- O'Callaghan, J. F., & Mark, D. M. (1984). The extraction of drainage networks
+  from digital elevation data. Computer Vision, Graphics, and Image Processing, 28(3), 323-344.
 """
 
 from typing import Tuple

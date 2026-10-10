@@ -19,6 +19,12 @@ def compute_ipcc_risk(
     Risk = Hazard * Exposure * Vulnerability
 
     All input rasters must be on the same grid and normalized to [0, 1].
+    
+    Note:
+    -----
+    The output is a dimensionless relative Risk Index in the range [0, 1],
+    useful for spatial comparison and zoning. It does not represent absolute
+    monetary damage or casualty estimates.
     """
     valid_mask = (~np.isnan(hazard)) & (~np.isnan(exposure)) & (~np.isnan(vulnerability))
     risk = np.full_like(hazard, np.nan, dtype=np.float32)

@@ -1,6 +1,15 @@
 """
-Spatial Block Cross-Validation to eliminate spatial autocorrelation leakage.
+Spatial Block Cross-Validation to mitigate spatial autocorrelation bias.
 Splits geographical coordinates into disjoint spatial blocks for model validation.
+
+References:
+-----------
+- Tobler, W. R. (1970). A computer movie simulating urban growth in the Detroit region.
+  Economic Geography, 46(sup1), 234-240.
+- Roberts, D. R., Bahn, V., Ciuti, S., Boyce, M. S., Elith, J., Guillera-Arroita, G.,
+  Hauenstein, S., Lahoz-Monfort, J. J., Schröder, B., Thuiller, W., & Warton, D. I. (2017).
+  Cross-validation strategies for data with temporal, spatial, or hierarchical structure.
+  Ecography, 40(8), 913-929.
 """
 
 from typing import Generator, List, Tuple
@@ -12,8 +21,15 @@ class SpatialBlockKFold:
     """
     K-Fold Cross-Validator with Spatial Block Partitioning.
     Uses K-Means clustering on geospatial coordinates (X, Y) to create
-    spatially contiguous folds, ensuring test samples are geographically
-    independent of training samples.
+    spatially contiguous folds, mitigating optimistic bias caused by spatial
+    autocorrelation (Tobler's First Law of Geography).
+
+    Note:
+    -----
+    While spatial coordinate clustering substantially reduces spatial leakage
+    compared to random cross-validation, residual autocorrelation across block
+    boundaries may persist in complex or irregular topographies. Additional
+    spatial holdouts or variogram analyses are recommended for specialized studies.
     """
 
     def __init__(self, n_splits: int = 5, random_state: int = 42):

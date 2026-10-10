@@ -1,6 +1,13 @@
 """
 Future adaptation and climate change scenario simulation.
-Simulates hazard probability shifts under rainfall scaling and Nature-based Solutions (NbS).
+Simulates projected hazard probability shifts under rainfall scaling
+and Nature-based Solutions (NbS) adaptation interventions.
+
+Note:
+-----
+Scenario outputs represent forward simulations under user-defined scaling
+and mitigation efficiencies, useful for comparative policy testing rather than
+deterministic predictions of future disaster outcomes.
 """
 
 from typing import Dict, Optional, Tuple
