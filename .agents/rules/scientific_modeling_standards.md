@@ -13,7 +13,7 @@ When designing, implementing, or documenting scientific modeling frameworks (esp
 - **Machine Learning Performance**: Avoid unverified claims of "high-accuracy" unless benchmarked against independent real-world ground truth or observed flood extents.
 
 ## 2. Data Provenance & Algorithmic Attribution
-- **Source Specifics**: Always document exact archive names, temporal coverage (e.g., CHIRPS 1981–2025), and spatial resolution (e.g., 0.05°, 30m, 100m).
+- **Source Specifics**: Always document exact archive names, version numbers (e.g., CHIRPS v3.0 DAILY_RNL; Funk et al., 2026), temporal coverage (e.g., 1981–2025, 45 years), and spatial resolution (e.g., 0.05°, 30m, 100m).
 - **Core Algorithm Citations**: Explicitly attribute standard formulas and algorithms in docstrings and docs:
   - Extreme Value Theory: Maximum Likelihood Estimation (MLE), Gumbel (1958), Coles (2001), WMO ETCCDI (Zhang et al., 2011).
   - Terrain Morphometry: Horn (1981) for slope/aspect; Zevenbergen & Thorne (1987) for curvatures.

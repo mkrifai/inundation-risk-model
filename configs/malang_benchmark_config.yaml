@@ -10,7 +10,7 @@ spatial:
   resolution_meters: 30.0
 
 hydroclimate:
-  input_rainfall_type: "chirps_v2_v3"
+  input_rainfall_type: "chirps_v3_rnl"
   temporal_range_years: 45
   distribution: "gumbel"
   return_periods_years: [2, 5, 10, 25, 50, 100]

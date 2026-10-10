@@ -85,7 +85,7 @@ While **InundationRisk** is site-agnostic, the benchmark case study uses open-ac
 
 | Layer | Source Archive | Temporal Coverage | Native Resolution | Processing & Method | Reference |
 |---|---|---|---|---|---|
-| **Precipitation** | CHIRPS v2.0 (UCSB CHC) / ERA5 | 1981–2025 (45 years) | $0.05^\circ \approx 5.5\text{ km}$ | Daily series extraction, annual maxima extraction, WMO ETCCDI calculation | Funk et al. (2015) |
+| **Precipitation** | CHIRPS v3.0 DAILY_RNL (UCSB CHC / ECMWF) | 1981–2025 (45 years) | $0.05^\circ \approx 5.5\text{ km}$ | Daily series extraction, annual maxima extraction, WMO ETCCDI calculation | Funk et al. (2026) |
 | **Elevation (DEM)** | Copernicus DEM GLO-30 / SRTM | Static (v2021) | $30\text{ m}$ ($1\text{ arc-sec}$) | Reprojected to UTM Zone 49S, sink filling, Horn 8-neighbor gradient | Horn (1981) |
 | **Curvatures** | Copernicus DEM GLO-30 | Static (v2021) | $30\text{ m}$ | 9-point bivariate quadratic polynomial fitting (Planform & Profile) | Zevenbergen & Thorne (1987) |
 | **Hydrological TWI** | Derived from DEM | Static | $30\text{ m}$ | D8 flow accumulation, steady-state subsurface flow $\ln(a / \tan \beta)$ | Beven & Kirkby (1979) |
@@ -271,7 +271,7 @@ All notebooks located in `notebooks/` are **fully pre-executed** with graphical 
 1. **Beven, K. J., & Kirkby, M. J. (1979).** A physically based, variable contributing area model of basin hydrology. *Hydrological Sciences Bulletin*, 24(1), 43–69.
 2. **Chow, V. T., Maidment, D. R., & Mays, L. W. (1988).** *Applied Hydrology*. McGraw-Hill.
 3. **Coles, S. (2001).** *An Introduction to Statistical Modeling of Extreme Values*. Springer.
-4. **Funk, C., et al. (2015).** The climate hazards group infrared precipitation with stations—a new environmental record for monitoring extremes. *Scientific Data*, 2(1), 1–21.
+4. **Funk, C., Peterson, P., Harrison, L., Saldivar, R., Landsfeld, M., Pedreros, D., Shukla, S., Fink, A. H., Davenport, F., Peterson, S., Turner, W., Sonnier, A., Budde, M., Tabor, K., Verdin, J., Hauzaree, D., Naim, M., Alaso, D., & Husak, G. (2026).** The Climate Hazards Center Infrared Precipitation with Stations, Version 3. *Scientific Data*, 13(1), 41597. https://doi.org/10.1038/s41597-026-07096-4
 5. **Gumbel, E. J. (1958).** *Statistics of Extremes*. Columbia University Press.
 6. **Horn, B. K. P. (1981).** Hill shading and the reflectance map. *Proceedings of the IEEE*, 69(1), 14–47.
 7. **IPCC. (2014).** *Climate Change 2014: Impacts, Adaptation, and Vulnerability*. Cambridge University Press.

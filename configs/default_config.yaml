@@ -16,7 +16,7 @@ spatial:
 
 # Phase 1: Hydroclimatic extreme analysis
 hydroclimate:
-  input_rainfall_type: "gridded_chirps"   # 'gridded_chirps', 'era5', or 'gauge_csv'
+  input_rainfall_type: "chirps_v3_rnl"   # 'chirps_v3_rnl', 'chirps_v3_sat', 'era5', or 'gauge_csv'
   rainfall_series_path: "data/raw/rainfall_daily.csv"
   distribution: "gumbel"                  # 'gumbel' or 'gev'
   return_periods_years: [2, 5, 10, 25, 50, 100]
