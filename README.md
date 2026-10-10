@@ -98,25 +98,52 @@ While **InundationRisk** is site-agnostic, the benchmark case study uses open-ac
 ## 🔬 Mathematical Formulations
 
 ### 1. Extreme Rainfall Frequency (Gumbel GEV Type I) & Uncertainty
-$$\Phi(x) = \exp\left(-\exp\left(-\frac{x - \mu}{\beta}\right)\right)$$
+
+$$
+\Phi(x) = \exp\left(-\exp\left(-\frac{x - \mu}{\beta}\right)\right)
+$$
+
 Reduced variate for return period $T$:
-$$y_T = -\ln\left(-\ln\left(1 - \frac{1}{T}\right)\right)$$
-$$x_T = \mu + \beta \cdot y_T$$
+
+$$
+y_T = -\ln\left(-\ln\left(1 - \frac{1}{T}\right)\right)
+$$
+
+$$
+x_T = \mu + \beta \cdot y_T
+$$
 
 **Asymptotic Standard Error & 95% Confidence Interval (Kite, 1977; Chow et al., 1988):**
-$$SE(x_T) = \frac{\beta}{\sqrt{N}} \sqrt{1.11 + 0.52 y_T + 1.10 y_T^2}$$
-$$CI_{95\%} = x_T \pm 1.96 \cdot SE(x_T)$$
+
+$$
+\text{SE}(x_T) = \frac{\beta}{\sqrt{N}} \sqrt{1.11 + 0.52 y_T + 1.10 y_T^2}
+$$
+
+$$
+\text{CI}_{0.95} = x_T \pm 1.96 \cdot \text{SE}(x_T)
+$$
 
 ### 2. Topographic Wetness Index (TWI) (Beven & Kirkby, 1979)
-$$\text{TWI} = \ln\left(\frac{a}{\tan \beta}\right)$$
+
+$$
+\text{TWI} = \ln\left(\frac{a}{\tan \beta}\right)
+$$
+
 where $a$ is the specific catchment area ($A \times \text{cell size}$) and $\beta$ is the terrain slope in radians.
 
 ### 3. IPCC Disaster Risk Synthesis (IPCC AR5/AR6)
-$$\text{Risk Index} = \text{Hazard} \times \text{Exposure} \times \text{Vulnerability}$$
+
+$$
+\text{Risk Index} = \text{Hazard} \times \text{Exposure} \times \text{Vulnerability}
+$$
+
 *Note: The synthesized metric represents a dimensionless relative Risk Index in the range $[0, 1]$, designed for comparative zoning rather than absolute monetary or casualty forecasting.*
 
 ### 4. AHP Consistency Verification (Saaty, 1980)
-$$\text{CI} = \frac{\lambda_{\max} - n}{n - 1}, \quad \text{CR} = \frac{\text{CI}}{\text{RI}} < 0.10$$
+
+$$
+\text{CI} = \frac{\lambda_{\max} - n}{n - 1}, \quad \text{CR} = \frac{\text{CI}}{\text{RI}} < 0.10
+$$
 
 ---
 
