@@ -45,3 +45,7 @@ Thumbs.db
 # Heavy scratch or temporary debug outputs
 *.log
 scratch/
+
+# PDF exports (keep local)
+notebooks/*.pdf
+*.pdf
