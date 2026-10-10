@@ -1,0 +1,21 @@
+{
+  "sample_size_years": 45,
+  "gumbel_fit": {
+    "mean_mm": 92.95555555555553,
+    "T2_mm": 92.5,
+    "T10_mm": 135.2,
+    "T50_mm": 175.8,
+    "T100_mm": 193.1
+  },
+  "ahp_weights": {
+    "Hazard": 0.558,
+    "Exposure": 0.32,
+    "Vulnerability": 0.122,
+    "consistency_ratio": 0.015
+  },
+  "hazard_model_target": {
+    "algorithm": "catboost",
+    "roc_auc_min": 0.9,
+    "f1_score_min": 0.85
+  }
+}

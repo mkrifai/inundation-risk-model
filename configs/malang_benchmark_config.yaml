@@ -1,0 +1,44 @@
+# InundationRisk: Malang Raya Golden Benchmark Configuration
+# Reproduces the multi-hazard risk assessment findings for Malang Raya (Kota & Kabupaten Malang)
+
+project_name: "Malang Raya Flood Risk Assessment Benchmark"
+study_area: "Kota Malang (5 subdistricts) & Kabupaten Malang (33 subdistricts)"
+version: "1.0.0"
+
+spatial:
+  crs: "EPSG:32749"
+  resolution_meters: 30.0
+
+hydroclimate:
+  input_rainfall_type: "chirps_v2_v3"
+  temporal_range_years: 45
+  distribution: "gumbel"
+  return_periods_years: [2, 5, 10, 25, 50, 100]
+  sample_series_path: "benchmarks/malang_raya/data/rainfall_annual_max.csv"
+
+spatial_features:
+  dem_raster_path: "benchmarks/malang_raya/data/malang_dem_sample.tif"
+  flow_accumulation_path: "benchmarks/malang_raya/data/malang_flow_accum_sample.tif"
+  stream_threshold_cells: 500
+
+hazard_ml:
+  algorithm: "catboost"
+  spatial_cross_validation:
+    enabled: true
+    n_splits: 5
+    random_state: 42
+  metrics_target:
+    roc_auc_min: 0.90
+    brier_score_max: 0.15
+
+risk_ipcc:
+  ahp_matrix:
+    - [1.0, 2.0, 4.0]
+    - [0.5, 1.0, 3.0]
+    - [0.25, 0.3333, 1.0]
+  criteria: ["Hazard", "Exposure", "Vulnerability"]
+  consistency_ratio_max: 0.10
+
+scenarios:
+  rtrw_planning_horizon: "2023-2043"
+  adaptation_target_reduction_pct: 25.0

@@ -1,0 +1,76 @@
+# InundationRisk Framework: Default Configuration Template
+# Use this template to configure simulations for any watershed or urban region.
+
+project_name: "Generic Watershed Inundation Risk Assessment"
+version: "1.0.0"
+
+# Spatial domain and reference coordinate system
+spatial:
+  crs: "EPSG:32749"              # UTM Zone 49S or appropriate local UTM projection
+  resolution_meters: 30.0        # Grid cell size in meters
+  bounding_box:                  # [xmin, ymin, xmax, ymax] in projected coordinates
+    - 650000.0
+    - 9100000.0
+    - 6900000.0
+    - 9150000.0
+
+# Phase 1: Hydroclimatic extreme analysis
+hydroclimate:
+  input_rainfall_type: "gridded_chirps"   # 'gridded_chirps', 'era5', or 'gauge_csv'
+  rainfall_series_path: "data/raw/rainfall_daily.csv"
+  distribution: "gumbel"                  # 'gumbel' or 'gev'
+  return_periods_years: [2, 5, 10, 25, 50, 100]
+  wet_threshold_mm: 1.0
+
+# Phase 2: Spatial conditioning factors
+spatial_features:
+  dem_raster_path: "data/raw/dem_30m.tif"
+  flow_accumulation_path: "data/raw/flow_accum.tif"
+  lulc_raster_path: "data/raw/worldcover_30m.tif"
+  river_network_threshold_cells: 1000
+  derived_factors:
+    - "slope"
+    - "aspect"
+    - "twi"
+    - "planform_curvature"
+    - "profile_curvature"
+    - "distance_to_stream"
+
+# Phase 3: Machine learning hazard modeling
+hazard_ml:
+  algorithm: "catboost"                   # 'catboost', 'xgboost', or 'random_forest'
+  ground_truth_inventory_path: "data/raw/flood_inventory.shp"
+  negative_sampling_ratio: 1.0            # 1:1 presence to pseudo-absence ratio
+  spatial_cross_validation:
+    enabled: true
+    n_splits: 5
+    random_state: 42
+  hyperparameters:
+    iterations: 300
+    learning_rate: 0.05
+    depth: 6
+  explainability:
+    compute_shap: true
+    sample_size: 1000
+
+# Phase 4: IPCC Risk synthesis (Risk = Hazard x Exposure x Vulnerability)
+risk_ipcc:
+  population_raster_path: "data/raw/worldpop_100m.tif"
+  builtup_raster_path: "data/raw/builtup_fraction.tif"
+  ahp_weighting:
+    enabled: true
+    criteria: ["Hazard", "Exposure", "Vulnerability"]
+    pairwise_matrix:
+      - [1.0, 2.0, 4.0]
+      - [0.5, 1.0, 3.0]
+      - [0.25, 0.3333, 1.0]
+  classification:
+    method: "quantile"                    # 'quantile' or 'equal'
+    n_classes: 5
+
+# Phase 5: Adaptation scenarios and policy overlay
+scenarios:
+  climate_change_rainfall_multiplier: 1.15 # +15% extreme rainfall
+  mitigation_risk_reduction_ratio: 0.20    # -20% risk with NbS / green infrastructure
+  zoning_plan_path: "data/raw/rtrw_zoning.shp"
+  planned_settlement_codes: [1, 2, 3]

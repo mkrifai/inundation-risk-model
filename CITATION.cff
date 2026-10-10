@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use InundationRisk in your research or applications, please cite it as below."
+title: "InundationRisk: A Generalized Open-Source Framework for Regional Inundation and Multi-Hazard Risk Modeling"
+version: 1.0.0
+date-released: 2026-10-10
+url: "https://github.com/mkrifai/inundation-risk-model"
+repository-code: "https://github.com/mkrifai/inundation-risk-model"
+license: BSD-3-Clause
+keywords:
+  - "inundation risk"
+  - "flood hazard modeling"
+  - "machine learning"
+  - "hydroclimatic extremes"
+  - "IPCC risk framework"
+  - "remote sensing"
+  - "reproducible science"
+authors:
+  - family-names: "Rifai"
+    given-names: "Mochamad Khoirul"
+    email: "mochamadkhoirulrifai25@gmail.com"
+    affiliation: "Geophysics Research Group, Department of Physics, Faculty of Mathematics and Natural Sciences, Universitas Negeri Malang (UM), Indonesia"
+preferred-citation:
+  type: software
+  title: "InundationRisk: A Generalized Open-Source Framework for Regional Inundation and Multi-Hazard Risk Modeling"
+  authors:
+    - family-names: "Rifai"
+      given-names: "Mochamad Khoirul"
+      email: "mochamadkhoirulrifai25@gmail.com"
+      affiliation: "Geophysics Research Group, Department of Physics, Faculty of Mathematics and Natural Sciences, Universitas Negeri Malang (UM), Indonesia"
+  year: 2026
+  url: "https://github.com/mkrifai/inundation-risk-model"
+  version: "1.0.0"
