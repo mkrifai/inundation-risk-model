@@ -24,3 +24,8 @@ When designing, implementing, or documenting scientific modeling frameworks (esp
 ## 3. Scope Boundaries & Uncertainty
 - **Benchmark Nature**: Explicitly distinguish between *code-verification benchmarks* (synthetic/deterministic testing against reference code) and *empirical validation* (testing against observed flood gauges/satellite inundation).
 - **Uncertainty Quantification**: Where feasible, provide analytical or empirical uncertainty estimates (e.g., 95% confidence intervals on return periods).
+
+## 4. Public Science Communication & Social Dissemination
+- **Modest & Calibrated Tone**: In public dissemination (e.g., LinkedIn, research summaries, conference notes), emphasize workflow reproducibility, modularity, and exploratory potential rather than definitive policy claims.
+- **Explicit Disclaimers**: Frame forward applications (e.g., spatial planning or climate adaptation overlays) as intended exploration avenues dependent on local context and ground-truth validation.
+- **Minimalist Academic Humility**: Avoid jargon bloating or overselling; maintain a balanced tone acknowledging ongoing development and community validation.
