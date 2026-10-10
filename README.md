@@ -121,7 +121,7 @@ inundation-risk/
 │       ├── reference_outputs/         # Golden reference metrics
 │       └── run_benchmark.py           # Turnkey replication script
 ├── notebooks/                         # Pre-executed Academic Benchmarks & Interactive Tutorials
-│   ├── InundationRisk_Master_Academic_Benchmark_Proof.ipynb  # 🌟 Flagship End-to-End Academic Benchmark & Mathematical Proof
+│   ├── InundationRisk_Master_Academic_Benchmark_Proof.ipynb  # 🌟 Benchmark & Theoretical Proof
 │   ├── 01_hydroclimatic_extremes.ipynb                      # Hydroclimatic Extremes & Return Periods
 │   ├── 02_spatial_conditioning_factors.ipynb                # Terrain Morphometry & Hydrological Factors
 │   ├── 03_machine_learning_hazard.ipynb                     # Spatial ML Hazard Modeling & Spatial Block CV
@@ -232,7 +232,7 @@ All notebooks located in `notebooks/` are **fully pre-executed** with graphical 
 
 | Notebook | Focus & Key Contributions | Outputs & Proofs |
 |---|---|---|
-| [**`InundationRisk_Master_Academic_Benchmark_Proof.ipynb`**](notebooks/InundationRisk_Master_Academic_Benchmark_Proof.ipynb) | **Flagship Master Benchmark & Mathematical Proof** covering all 5 pillars of the framework | • Rigorous LaTeX equations & derivations<br>• GEV/Gumbel Kolmogorov-Smirnov fit proof<br>• Spatial Block CV vs Random CV bias demonstration<br>• SHAP feature attributions (Beeswarm, PDP)<br>• Saaty AHP matrix & eigen-analysis ($CR < 0.10$)<br>• High-resolution risk maps & climate scaling |
+| [**`InundationRisk_Master_Academic_Benchmark_Proof.ipynb`**](notebooks/InundationRisk_Master_Academic_Benchmark_Proof.ipynb) | **InundationRisk: Benchmark & Theoretical Proof** covering all 5 pillars of the framework | • Rigorous LaTeX equations & derivations<br>• GEV/Gumbel Kolmogorov-Smirnov fit proof<br>• Spatial Block CV vs Random CV bias demonstration<br>• SHAP feature attributions (Beeswarm, PDP)<br>• Saaty AHP matrix & eigen-analysis ($CR < 0.10$)<br>• High-resolution risk maps & climate scaling |
 | [**`01_hydroclimatic_extremes.ipynb`**](notebooks/01_hydroclimatic_extremes.ipynb) | Extreme value distribution fitting & climate indices | • Gumbel vs. GEV return level curves ($T=2\dots100\text{ yr}$)<br>• Cunnane empirical plotting positions<br>• 7 core ETCCDI indices (RX1day, RX5day, SDII, R95p, etc.) |
 | [**`02_spatial_conditioning_factors.ipynb`**](notebooks/02_spatial_conditioning_factors.ipynb) | Terrain morphometry & hydrological feature extraction | • Zevenbergen-Thorne planar/profile curvatures<br>• Topographic Wetness Index (TWI) mapping<br>• Stream network delineation & Euclidean distance transforms |
 | [**`03_machine_learning_hazard.ipynb`**](notebooks/03_machine_learning_hazard.ipynb) | Spatial ML hazard susceptibility modeling | • Spatial Block K-Fold vs. Random K-Fold comparison<br>• Random Forest & Tree ensemble training<br>• TreeExplainer SHAP summary plots & partial dependence |
