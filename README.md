@@ -268,21 +268,21 @@ All notebooks located in `notebooks/` are **fully pre-executed** with graphical 
 
 ## 📚 Scientific References
 
-1. **Beven, K. J., & Kirkby, M. J. (1979).** A physically based, variable contributing area model of basin hydrology. *Hydrological Sciences Bulletin*, 24(1), 43–69.
+1. **Beven, K. J., & Kirkby, M. J. (1979).** A physically based, variable contributing area model of basin hydrology/Un modèle à base physique de zone d'appel variable de l'hydrologie du bassin versant. *Hydrological Sciences Journal*, 24(1), 43–69. https://doi.org/10.1080/02626667909491834
 2. **Chow, V. T., Maidment, D. R., & Mays, L. W. (1988).** *Applied Hydrology*. McGraw-Hill.
 3. **Coles, S. (2001).** *An Introduction to Statistical Modeling of Extreme Values*. Springer.
 4. **Funk, C., Peterson, P., Harrison, L., Saldivar, R., Landsfeld, M., Pedreros, D., Shukla, S., Fink, A. H., Davenport, F., Peterson, S., Turner, W., Sonnier, A., Budde, M., Tabor, K., Verdin, J., Hauzaree, D., Naim, M., Alaso, D., & Husak, G. (2026).** The Climate Hazards Center Infrared Precipitation with Stations, Version 3. *Scientific Data*, 13(1), 41597. https://doi.org/10.1038/s41597-026-07096-4
 5. **Gumbel, E. J. (1958).** *Statistics of Extremes*. Columbia University Press.
-6. **Horn, B. K. P. (1981).** Hill shading and the reflectance map. *Proceedings of the IEEE*, 69(1), 14–47.
+6. **Horn, B. K. (1981).** Hill shading and the reflectance map. *Proceedings of the IEEE*, 69(1), 14–47. https://doi.org/10.1109/PROC.1981.11918
 7. **IPCC. (2014).** *Climate Change 2014: Impacts, Adaptation, and Vulnerability*. Cambridge University Press.
 8. **Kite, G. W. (1977).** *Frequency and Risk Analyses in Hydrology*. Water Resources Publications.
 9. **Lundberg, S. M., & Lee, S.-I. (2017).** A unified approach to interpreting model predictions. *Advances in Neural Information Processing Systems (NeurIPS)*, 30.
 10. **O'Callaghan, J. F., & Mark, D. M. (1984).** The extraction of drainage networks from digital elevation data. *Computer Vision, Graphics, and Image Processing*, 28(3), 323–344.
-11. **Roberts, D. R., et al. (2017).** Cross-validation strategies for data with temporal, spatial, or hierarchical structure. *Ecography*, 40(8), 913–929.
+11. **Roberts, D. R., Bahn, V., Ciuti, S., Boyce, M. S., Elith, J., Guillera‐Arroita, G., ... & Dormann, C. F. (2017).** Cross‐validation strategies for data with temporal, spatial, hierarchical, or phylogenetic structure. *Ecography*, 40(8), 913–929. https://doi.org/10.1111/ecog.02881
 12. **Saaty, T. L. (1980).** *The Analytic Hierarchy Process: Planning, Priority Setting, Resource Allocation*. McGraw-Hill.
 13. **WorldPop. (2020).** Global High Resolution Population Denominators Project. University of Southampton.
-14. **Zevenbergen, L. W., & Thorne, C. R. (1987).** Quantitative analysis of land surface topography. *Earth Surface Processes and Landforms*, 12(1), 47–56.
-15. **Zhang, X., et al. (2011).** Indices for monitoring changes in extremes based on daily temperature and precipitation data. *WIREs Climate Change*, 2(6), 851–870.
+14. **Zevenbergen, L. W., & Thorne, C. R. (1987).** Quantitative analysis of land surface topography. *Earth Surface Processes and Landforms*, 12(1), 47–56. https://doi.org/10.1002/esp.3290120107
+15. **Zhang, X., Alexander, L., Hegerl, G. C., Jones, P., Tank, A. K., Peterson, T. C., ... & Zwiers, F. W. (2011).** Indices for monitoring changes in extremes based on daily temperature and precipitation data. *Wiley Interdisciplinary Reviews: Climate Change*, 2(6), 851–870. https://doi.org/10.1002/wcc.147
 
 ---
 
