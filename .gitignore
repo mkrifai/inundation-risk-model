@@ -46,6 +46,11 @@ Thumbs.db
 *.log
 scratch/
 
+# Agent / AI assistants
+.agent/
+.agents/
+
 # PDF exports (keep local)
 notebooks/*.pdf
 *.pdf
+
