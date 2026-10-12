@@ -1,18 +1,22 @@
 <div align="center">
 
-# InundationRisk
+  <h1>InundationRisk</h1>
 
-### A Generalized Open-Source Framework for Regional Inundation and Multi-Hazard Risk Modeling
+  <h3>A Generalized Open-Source Framework for Regional Inundation and Multi-Hazard Risk Modeling</h3>
 
-[![License: BSD 3-Clause](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
-[![Python Version](https://img.shields.io/badge/Python-3.10%20%7C%203.11%20%7C%203.12-green.svg)](https://www.python.org/)
-[![CI Status](https://img.shields.io/badge/Build-Passing-brightgreen.svg)](#)
-[![Reproducibility: FAIR](https://img.shields.io/badge/FAIR-Reproducible%20Science-orange.svg)](#)
-[![Cite](https://img.shields.io/badge/Cite-CITATION.cff-blueviolet.svg)](CITATION.cff)
+  <p>
+    <a href="https://opensource.org/licenses/BSD-3-Clause"><img src="https://img.shields.io/badge/License-BSD_3--Clause-blue.svg" alt="License: BSD 3-Clause"></a>
+    <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.10%20%7C%203.11%20%7C%203.12-green.svg" alt="Python Version"></a>
+    <a href="#"><img src="https://img.shields.io/badge/Build-Passing-brightgreen.svg" alt="CI Status"></a>
+    <a href="#"><img src="https://img.shields.io/badge/FAIR-Reproducible%20Science-orange.svg" alt="Reproducibility: FAIR"></a>
+    <a href="https://github.com/mkrifai/inundation-risk-model/blob/main/CITATION.cff"><img src="https://img.shields.io/badge/Cite-CITATION.cff-blueviolet.svg" alt="Cite"></a>
+  </p>
 
-**Author:**  
-Mochamad Khoirul Rifai  
-*Geophysics Research Group, Department of Physics, Faculty of Mathematics and Natural Sciences, Universitas Negeri Malang (UM), Indonesia*
+  <p>
+    <strong>Author:</strong><br>
+    Mochamad Khoirul Rifai<br>
+    <em>Geophysics Research Group, Department of Physics, Faculty of Mathematics and Natural Sciences, Universitas Negeri Malang (UM), Indonesia</em>
+  </p>
 
 </div>
 
@@ -282,14 +286,14 @@ python benchmarks/malang_raya/run_benchmark.py
 
 All notebooks located in `notebooks/` are **fully pre-executed** with graphical plots, mathematical formatting, and tabular outputs saved directly in cell metadata. You can inspect them directly on GitHub or run them interactively in JupyterLab.
 
-| Notebook | Focus & Key Contributions | Outputs & Proofs |
-|---|---|---|
-| [**`InundationRisk_Master_Academic_Benchmark_Proof.ipynb`**](notebooks/InundationRisk_Master_Academic_Benchmark_Proof.ipynb) | **InundationRisk: Benchmark & Theoretical Proof** covering all 5 pillars of the framework | • Rigorous LaTeX equations & derivations<br>• GEV/Gumbel Kolmogorov-Smirnov fit proof<br>• Return level curves with 95% Confidence Intervals<br>• Spatial Block CV vs Random CV bias mitigation proof<br>• SHAP feature attributions (Beeswarm, PDP)<br>• Saaty AHP matrix & eigen-analysis ($CR < 0.10$)<br>• High-resolution risk maps & climate scaling |
-| [**`01_hydroclimatic_extremes.ipynb`**](notebooks/01_hydroclimatic_extremes.ipynb) | Extreme value distribution fitting & climate indices | • Gumbel vs. GEV return level curves ($T=2\dots100\text{ yr}$) with 95% CI<br>• Cunnane empirical plotting positions<br>• 7 core WMO ETCCDI indices (RX1day, RX5day, SDII, R95p, etc.) |
-| [**`02_spatial_conditioning_factors.ipynb`**](notebooks/02_spatial_conditioning_factors.ipynb) | Terrain morphometry & hydrological feature extraction | • Zevenbergen-Thorne planar/profile curvatures<br>• Topographic Wetness Index (TWI) mapping<br>• Stream network delineation & Euclidean distance transforms |
-| [**`03_machine_learning_hazard.ipynb`**](notebooks/03_machine_learning_hazard.ipynb) | Spatial ML hazard susceptibility modeling | • Spatial Block K-Fold vs. Random K-Fold comparison<br>• Random Forest & Tree ensemble training<br>• TreeExplainer SHAP summary plots & partial dependence |
-| [**`04_integrated_flood_risk.ipynb`**](notebooks/04_integrated_flood_risk.ipynb) | IPCC disaster risk synthesis ($\text{Risk} = H \times E \times V$) | • Pairwise comparison matrix & Consistency Ratio check<br>• WorldPop population exposure integration<br>• Quantile / Jenks risk classification & proposed hotspot ranking |
-| [**`05_adaptation_scenarios.ipynb`**](notebooks/05_adaptation_scenarios.ipynb) | Forward climate scaling & spatial planning overlay | • +15% and +25% precipitation intensification scenarios<br>• Municipal Spatial Plan (RTRW 2023–2043) conflict detection<br>• Projected risk reduction metrics under modeled adaptation |
+| Notebook | Focus & Key Contributions | Interactive Views & Execution | Outputs & Proofs |
+|---|---|---|---|
+| [**`InundationRisk_Master_Academic_Benchmark_Proof.ipynb`**](https://github.com/mkrifai/inundation-risk-model/blob/main/notebooks/InundationRisk_Master_Academic_Benchmark_Proof.ipynb) | **Master Academic Benchmark & Theoretical Proof** covering all 5 pillars of the framework | [![GitHub](https://img.shields.io/badge/GitHub-View%20Notebook-181717?logo=github)](https://github.com/mkrifai/inundation-risk-model/blob/main/notebooks/InundationRisk_Master_Academic_Benchmark_Proof.ipynb)<br>[![NBViewer](https://img.shields.io/badge/NBViewer-Academic%20View-orange)](https://nbviewer.org/github/mkrifai/inundation-risk-model/blob/main/notebooks/InundationRisk_Master_Academic_Benchmark_Proof.ipynb)<br>[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mkrifai/inundation-risk-model/blob/main/notebooks/InundationRisk_Master_Academic_Benchmark_Proof.ipynb) | • Rigorous LaTeX equations & derivations<br>• GEV/Gumbel Kolmogorov-Smirnov fit proof<br>• Return level curves with 95% Confidence Intervals<br>• Spatial Block CV vs Random CV bias mitigation proof<br>• SHAP feature attributions (Beeswarm, PDP)<br>• Saaty AHP matrix & eigen-analysis ($CR < 0.10$)<br>• High-resolution risk maps & climate scaling |
+| [**`01_hydroclimatic_extremes.ipynb`**](https://github.com/mkrifai/inundation-risk-model/blob/main/notebooks/01_hydroclimatic_extremes.ipynb) | Extreme value distribution fitting & climate indices | [![GitHub](https://img.shields.io/badge/GitHub-View%20Notebook-181717?logo=github)](https://github.com/mkrifai/inundation-risk-model/blob/main/notebooks/01_hydroclimatic_extremes.ipynb)<br>[![NBViewer](https://img.shields.io/badge/NBViewer-Academic%20View-orange)](https://nbviewer.org/github/mkrifai/inundation-risk-model/blob/main/notebooks/01_hydroclimatic_extremes.ipynb)<br>[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mkrifai/inundation-risk-model/blob/main/notebooks/01_hydroclimatic_extremes.ipynb) | • Gumbel vs. GEV return level curves ($T=2\dots100\text{ yr}$) with 95% CI<br>• Cunnane empirical plotting positions<br>• 7 core WMO ETCCDI indices (RX1day, RX5day, SDII, R95p, etc.) |
+| [**`02_spatial_conditioning_factors.ipynb`**](https://github.com/mkrifai/inundation-risk-model/blob/main/notebooks/02_spatial_conditioning_factors.ipynb) | Terrain morphometry & hydrological feature extraction | [![GitHub](https://img.shields.io/badge/GitHub-View%20Notebook-181717?logo=github)](https://github.com/mkrifai/inundation-risk-model/blob/main/notebooks/02_spatial_conditioning_factors.ipynb)<br>[![NBViewer](https://img.shields.io/badge/NBViewer-Academic%20View-orange)](https://nbviewer.org/github/mkrifai/inundation-risk-model/blob/main/notebooks/02_spatial_conditioning_factors.ipynb)<br>[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mkrifai/inundation-risk-model/blob/main/notebooks/02_spatial_conditioning_factors.ipynb) | • Zevenbergen-Thorne planar/profile curvatures<br>• Topographic Wetness Index (TWI) mapping<br>• Stream network delineation & Euclidean distance transforms |
+| [**`03_machine_learning_hazard.ipynb`**](https://github.com/mkrifai/inundation-risk-model/blob/main/notebooks/03_machine_learning_hazard.ipynb) | Spatial ML hazard susceptibility modeling | [![GitHub](https://img.shields.io/badge/GitHub-View%20Notebook-181717?logo=github)](https://github.com/mkrifai/inundation-risk-model/blob/main/notebooks/03_machine_learning_hazard.ipynb)<br>[![NBViewer](https://img.shields.io/badge/NBViewer-Academic%20View-orange)](https://nbviewer.org/github/mkrifai/inundation-risk-model/blob/main/notebooks/03_machine_learning_hazard.ipynb)<br>[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mkrifai/inundation-risk-model/blob/main/notebooks/03_machine_learning_hazard.ipynb) | • Spatial Block K-Fold vs. Random K-Fold comparison<br>• Random Forest & Tree ensemble training<br>• TreeExplainer SHAP summary plots & partial dependence |
+| [**`04_integrated_flood_risk.ipynb`**](https://github.com/mkrifai/inundation-risk-model/blob/main/notebooks/04_integrated_flood_risk.ipynb) | IPCC disaster risk synthesis ($\text{Risk} = H \times E \times V$) | [![GitHub](https://img.shields.io/badge/GitHub-View%20Notebook-181717?logo=github)](https://github.com/mkrifai/inundation-risk-model/blob/main/notebooks/04_integrated_flood_risk.ipynb)<br>[![NBViewer](https://img.shields.io/badge/NBViewer-Academic%20View-orange)](https://nbviewer.org/github/mkrifai/inundation-risk-model/blob/main/notebooks/04_integrated_flood_risk.ipynb)<br>[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mkrifai/inundation-risk-model/blob/main/notebooks/04_integrated_flood_risk.ipynb) | • Pairwise comparison matrix & Consistency Ratio check<br>• WorldPop population exposure integration<br>• Quantile / Jenks risk classification & proposed hotspot ranking |
+| [**`05_adaptation_scenarios.ipynb`**](https://github.com/mkrifai/inundation-risk-model/blob/main/notebooks/05_adaptation_scenarios.ipynb) | Forward climate scaling & spatial planning overlay | [![GitHub](https://img.shields.io/badge/GitHub-View%20Notebook-181717?logo=github)](https://github.com/mkrifai/inundation-risk-model/blob/main/notebooks/05_adaptation_scenarios.ipynb)<br>[![NBViewer](https://img.shields.io/badge/NBViewer-Academic%20View-orange)](https://nbviewer.org/github/mkrifai/inundation-risk-model/blob/main/notebooks/05_adaptation_scenarios.ipynb)<br>[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mkrifai/inundation-risk-model/blob/main/notebooks/05_adaptation_scenarios.ipynb) | • +15% and +25% precipitation intensification scenarios<br>• Municipal Spatial Plan (RTRW 2023–2043) conflict detection<br>• Projected risk reduction metrics under modeled adaptation |
 
 ---
 
