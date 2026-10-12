@@ -1,0 +1,59 @@
+<!-- MathJax 3 Configuration for LaTeX Mathematics Rendering -->
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+<!-- Mermaid JS for Architecture Diagram Rendering -->
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: false, theme: 'default' });
+
+  function renderMermaid() {
+    try {
+      const codeBlocks = document.querySelectorAll('pre code.language-mermaid, pre.mermaid, code.language-mermaid');
+      codeBlocks.forEach((codeEl) => {
+        const pre = codeEl.tagName === 'PRE' ? codeEl : codeEl.closest('pre') || codeEl;
+        const container = document.createElement('div');
+        container.className = 'mermaid';
+        container.textContent = codeEl.textContent;
+        pre.parentNode.replaceChild(container, pre);
+      });
+      mermaid.run({ querySelector: '.mermaid' });
+    } catch (err) {
+      console.error('Mermaid rendering error:', err);
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', renderMermaid);
+  } else {
+    renderMermaid();
+  }
+</script>
+
+<style>
+  /* Responsive styling for MathJax and Mermaid */
+  .mjx-chtml, .MathJax {
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  .mermaid {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+  }
+</style>
