@@ -14,7 +14,7 @@
 
   <p>
     <strong>Author:</strong><br>
-    Mochamad Khoirul Rifai and Cahyo Aji Hapsoro<br>
+    Mochamad Khoirul Rifai<br>
     <em>Geophysics Research Group, Department of Physics, Faculty of Mathematics and Natural Sciences, Universitas Negeri Malang (UM), Indonesia</em>
   </p>
 
@@ -323,8 +323,8 @@ If you use **InundationRisk** in your research, thesis, or applications, please 
 
 ### BibTeX
 ```bibtex
-@software{Rifai and Cahyo_InundationRisk_2026,
-  author = {Rifai, Mochamad Khoirul; Hapsoro, Cahyo Aji},
+@software{Rifai_InundationRisk_2026,
+  author = {Rifai, Mochamad Khoirul},
   title = {InundationRisk: A Generalized Open-Source Framework for Regional Inundation and Multi-Hazard Risk Modeling},
   year = {2026},
   publisher = {GitHub},
